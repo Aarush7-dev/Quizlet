@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Creator and Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz Creator & Player</h1>
+    </header>
+
+    <main>
+        <section id="quiz-creator">
+            <h2>Create Your Quiz</h2>
+            <div id="question-form">
+                <input type="text" id="question" placeholder="Enter a question">
+                <input type="text" id="answer" placeholder="Enter the answer">
+                <button onclick="addQuestion()">Add Question</button>
+            </div>
+            <div>
+                <h3>Questions Added:</h3>
+                <ul id="questions-list"></ul>
+            </div>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </section>
+
+        <section id="quiz-player" style="display: none;">
+            <h2>Play the Quiz</h2>
+            <div id="current-question">
+                <p id="question-display"></p>
+                <input type="text" id="player-answer" placeholder="Your answer">
+                <button onclick="submitAnswer()">Submit</button>
+            </div>
+            <p id="quiz-feedback"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Quiz Creator. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
